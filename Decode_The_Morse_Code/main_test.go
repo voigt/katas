@@ -20,15 +20,15 @@ var tables = []struct {
 	{"      ... --- ... -.-.--   - .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-  ", "sos! the quick brown fox jumps over the lazy dog."},
 }
 
-// func TestDecodeMorse(t *testing.T) {
+func TestDecodeMorse(t *testing.T) {
 
-// 	for _, table := range tables {
-// 		decodedStr := DecodeMorse(table.encodedStr)
-// 		if decodedStr != table.expectStr {
-// 			t.Errorf("Decoding of '%s' was incorrect got: %s, want: %s.", table.encodedStr, decodedStr, table.expectStr)
-// 		}
-// 	}
-// }
+	for _, table := range tables {
+		decodedStr := DecodeMorse(table.encodedStr)
+		if decodedStr != table.expectStr {
+			t.Errorf("Decoding of '%s' was incorrect got: %s, want: %s.", table.encodedStr, decodedStr, table.expectStr)
+		}
+	}
+}
 
 func TestElegantDecodeMorse(t *testing.T) {
 	for _, table := range tables {
